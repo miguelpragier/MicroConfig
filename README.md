@@ -15,7 +15,7 @@ go get github.com/miguelpragier/microconfig
   "pairs":[
     {
       "key": "Environment",
-      "value": "dev",
+      "value": "dev"
     },
     {
       "key": "SomeKey",
