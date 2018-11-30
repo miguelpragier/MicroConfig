@@ -50,7 +50,7 @@ func Load(configFile string) error {
 
 	for _, p := range mc.Pairs {
 		if p.OSEnv {
-			os.Setenv(p.Key, p.Value)
+			_ = os.Setenv(p.Key, p.Value)
 		}
 	}
 
