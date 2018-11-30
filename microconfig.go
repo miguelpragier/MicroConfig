@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"io/ioutil"
+	"log"
 	"os"
 	"strconv"
 	"strings"
@@ -23,6 +24,12 @@ type microConfig struct {
 }
 
 var mc microConfig
+
+func init() {
+	if err := Load(""); err != nil {
+		log.Printf("microconfig.init %s", err.Error())
+	}
+}
 
 // Load/Reload configuration pairs from config file.
 // If configFile=="", load from defaultConfigFile constant.
